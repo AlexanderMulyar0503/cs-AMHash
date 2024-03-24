@@ -165,6 +165,7 @@
             this.buttonHashCalc.TabIndex = 6;
             this.buttonHashCalc.Text = "Вичислить контрольную сумму";
             this.buttonHashCalc.UseVisualStyleBackColor = true;
+            this.buttonHashCalc.Click += new System.EventHandler(this.buttonHashCalc_Click);
             // 
             // hashExpectation
             // 
@@ -243,6 +244,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
             this.Text = "AMHash";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.formMainMenu.ResumeLayout(false);
             this.formMainMenu.PerformLayout();
             this.ResumeLayout(false);
