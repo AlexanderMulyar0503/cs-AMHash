@@ -16,5 +16,10 @@ namespace AMHash
         {
             InitializeComponent();
         }
+
+        private void buttonOpenFile_Click(object sender, EventArgs e)
+        {
+            calcOpenFileDialog.ShowDialog();
+        }
     }
 }
