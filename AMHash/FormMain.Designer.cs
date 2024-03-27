@@ -75,8 +75,9 @@
             // formMainMenuSettings
             // 
             this.formMainMenuSettings.Name = "formMainMenuSettings";
-            this.formMainMenuSettings.Size = new System.Drawing.Size(138, 22);
+            this.formMainMenuSettings.Size = new System.Drawing.Size(180, 22);
             this.formMainMenuSettings.Text = "Параметры";
+            this.formMainMenuSettings.Click += new System.EventHandler(this.formMainMenuSettings_Click);
             // 
             // formMainMenuSeparator1
             // 
@@ -86,8 +87,9 @@
             // formMainMenuExit
             // 
             this.formMainMenuExit.Name = "formMainMenuExit";
-            this.formMainMenuExit.Size = new System.Drawing.Size(138, 22);
+            this.formMainMenuExit.Size = new System.Drawing.Size(180, 22);
             this.formMainMenuExit.Text = "Выход";
+            this.formMainMenuExit.Click += new System.EventHandler(this.formMainMenuExit_Click);
             // 
             // formMainMenuHelp
             // 
@@ -241,10 +243,13 @@
             this.Controls.Add(this.labelCalcAlgorithm);
             this.Controls.Add(this.formMainMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Location = new System.Drawing.Point(25, 25);
             this.MainMenuStrip = this.formMainMenu;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AMHash";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.formMainMenu.ResumeLayout(false);
             this.formMainMenu.PerformLayout();

@@ -22,7 +22,28 @@ namespace AMHash
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            this.Location = new Point(Properties.Settings.Default.positionX, Properties.Settings.Default.positionY);
+            this.Size = new Size(Properties.Settings.Default.sizeWidth, Properties.Settings.Default.sizeHeight);
             calcAlgorithm.SelectedIndex = 0;
+        }
+
+        private void formMainMenuSettings_Click(object sender, EventArgs e)
+        {
+            FormSettings formSettings = new FormSettings();
+            formSettings.extMD5.Text = Properties.Settings.Default.extMD5;
+            formSettings.extSHA256.Text = Properties.Settings.Default.extSHA256;
+            formSettings.positionX.Value = Properties.Settings.Default.positionX;
+            formSettings.positionY.Value = Properties.Settings.Default.positionY;
+            formSettings.sizeWidth.Value = Properties.Settings.Default.sizeWidth;
+            formSettings.sizeHeight.Value = Properties.Settings.Default.sizeHeight;
+            formSettings.ShowDialog();
+            this.Location = new Point(Properties.Settings.Default.positionX, Properties.Settings.Default.positionY);
+            this.Size = new Size(Properties.Settings.Default.sizeWidth, Properties.Settings.Default.sizeHeight);
+        }
+
+        private void formMainMenuExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void calcAlgorithm_SelectedIndexChanged(object sender, EventArgs e)
@@ -80,6 +101,15 @@ namespace AMHash
                     hashResult.BackColor = Color.Red;
                 }
             }
+        }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.positionX = this.Location.X;
+            Properties.Settings.Default.positionY = this.Location.Y;
+            Properties.Settings.Default.sizeWidth = this.Size.Width;
+            Properties.Settings.Default.sizeHeight = this.Size.Height;
+            Properties.Settings.Default.Save();
         }
     }
 }
