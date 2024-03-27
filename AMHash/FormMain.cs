@@ -25,6 +25,12 @@ namespace AMHash
             calcAlgorithm.SelectedIndex = 0;
         }
 
+        private void calcAlgorithm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hashResult.BackColor = SystemColors.Window;
+            hashResult.Text = "";
+        }
+
         private void buttonOpenFile_Click(object sender, EventArgs e)
         {
             calcOpenFileDialog.ShowDialog();

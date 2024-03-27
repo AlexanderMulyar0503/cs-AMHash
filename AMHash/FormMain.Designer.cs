@@ -75,18 +75,18 @@
             // formMainMenuSettings
             // 
             this.formMainMenuSettings.Name = "formMainMenuSettings";
-            this.formMainMenuSettings.Size = new System.Drawing.Size(180, 22);
+            this.formMainMenuSettings.Size = new System.Drawing.Size(138, 22);
             this.formMainMenuSettings.Text = "Параметры";
             // 
             // formMainMenuSeparator1
             // 
             this.formMainMenuSeparator1.Name = "formMainMenuSeparator1";
-            this.formMainMenuSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.formMainMenuSeparator1.Size = new System.Drawing.Size(135, 6);
             // 
             // formMainMenuExit
             // 
             this.formMainMenuExit.Name = "formMainMenuExit";
-            this.formMainMenuExit.Size = new System.Drawing.Size(180, 22);
+            this.formMainMenuExit.Size = new System.Drawing.Size(138, 22);
             this.formMainMenuExit.Text = "Выход";
             // 
             // formMainMenuHelp
@@ -100,7 +100,7 @@
             // formMainMenuAbout
             // 
             this.formMainMenuAbout.Name = "formMainMenuAbout";
-            this.formMainMenuAbout.Size = new System.Drawing.Size(180, 22);
+            this.formMainMenuAbout.Size = new System.Drawing.Size(149, 22);
             this.formMainMenuAbout.Text = "О программе";
             // 
             // labelCalcAlgorithm
@@ -125,6 +125,7 @@
             this.calcAlgorithm.Name = "calcAlgorithm";
             this.calcAlgorithm.Size = new System.Drawing.Size(354, 24);
             this.calcAlgorithm.TabIndex = 2;
+            this.calcAlgorithm.SelectedIndexChanged += new System.EventHandler(this.calcAlgorithm_SelectedIndexChanged);
             // 
             // labelOpenFile
             // 
