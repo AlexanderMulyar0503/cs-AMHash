@@ -55,6 +55,7 @@ namespace AMHash
             Properties.Settings.Default.sizeWidth = cancelSizeWidth;
             Properties.Settings.Default.sizeHeight = cancelSizeHeight;
             Properties.Settings.Default.Save();
+            this.Close();
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
@@ -66,6 +67,7 @@ namespace AMHash
             Properties.Settings.Default.sizeWidth = Convert.ToInt32(sizeWidth.Value);
             Properties.Settings.Default.sizeHeight = Convert.ToInt32(sizeHeight.Value);
             Properties.Settings.Default.Save();
+            this.Close();
         }
     }
 }
