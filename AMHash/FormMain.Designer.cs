@@ -221,6 +221,7 @@
             this.buttonSaviInFile.TabIndex = 11;
             this.buttonSaviInFile.Text = "Сохранить результат";
             this.buttonSaviInFile.UseVisualStyleBackColor = true;
+            this.buttonSaviInFile.Click += new System.EventHandler(this.buttonSaviInFile_Click);
             // 
             // calcOpenFileDialog
             // 

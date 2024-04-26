@@ -117,5 +117,32 @@ namespace AMHash
             FormAbout formAbout = new FormAbout();
             formAbout.ShowDialog();
         }
+
+        private void buttonSaviInFile_Click(object sender, EventArgs e)
+        {
+
+            if (File.Exists(openFilePath.Text))
+            {
+                // MD5
+                if (calcAlgorithm.SelectedIndex == 0)
+                {
+                    FileInfo fileInfo = new FileInfo(openFilePath.Text);
+                    StreamWriter streamWriter = new StreamWriter(openFilePath.Text + "." + Properties.Settings.Default.extMD5);
+                    streamWriter.Write(hashResult.Text + " " + fileInfo.Name);
+                    streamWriter.Close();
+                }
+
+                // SHA256
+                if (calcAlgorithm.SelectedIndex == 1)
+                {
+                    FileInfo fileInfo = new FileInfo(openFilePath.Text);
+                    StreamWriter streamWriter = new StreamWriter(openFilePath.Text + "." + Properties.Settings.Default.extSHA256);
+                    streamWriter.Write(hashResult.Text + " " + fileInfo.Name);
+                    streamWriter.Close();
+                }
+
+                MessageBox.Show("Сохранено");
+            }
+        }
     }
 }
