@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.formMainMenu = new System.Windows.Forms.MenuStrip();
             this.formMainMenuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.formMainMenuSettings = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +76,7 @@
             // formMainMenuSettings
             // 
             this.formMainMenuSettings.Name = "formMainMenuSettings";
-            this.formMainMenuSettings.Size = new System.Drawing.Size(180, 22);
+            this.formMainMenuSettings.Size = new System.Drawing.Size(138, 22);
             this.formMainMenuSettings.Text = "Параметры";
             this.formMainMenuSettings.Click += new System.EventHandler(this.formMainMenuSettings_Click);
             // 
@@ -87,7 +88,7 @@
             // formMainMenuExit
             // 
             this.formMainMenuExit.Name = "formMainMenuExit";
-            this.formMainMenuExit.Size = new System.Drawing.Size(180, 22);
+            this.formMainMenuExit.Size = new System.Drawing.Size(138, 22);
             this.formMainMenuExit.Text = "Выход";
             this.formMainMenuExit.Click += new System.EventHandler(this.formMainMenuExit_Click);
             // 
@@ -102,8 +103,9 @@
             // formMainMenuAbout
             // 
             this.formMainMenuAbout.Name = "formMainMenuAbout";
-            this.formMainMenuAbout.Size = new System.Drawing.Size(149, 22);
+            this.formMainMenuAbout.Size = new System.Drawing.Size(180, 22);
             this.formMainMenuAbout.Text = "О программе";
+            this.formMainMenuAbout.Click += new System.EventHandler(this.formMainMenuAbout_Click);
             // 
             // labelCalcAlgorithm
             // 
@@ -243,6 +245,7 @@
             this.Controls.Add(this.labelCalcAlgorithm);
             this.Controls.Add(this.formMainMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(25, 25);
             this.MainMenuStrip = this.formMainMenu;
             this.Margin = new System.Windows.Forms.Padding(4);

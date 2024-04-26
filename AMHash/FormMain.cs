@@ -111,5 +111,11 @@ namespace AMHash
             Properties.Settings.Default.sizeHeight = this.Size.Height;
             Properties.Settings.Default.Save();
         }
+
+        private void formMainMenuAbout_Click(object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
+        }
     }
 }

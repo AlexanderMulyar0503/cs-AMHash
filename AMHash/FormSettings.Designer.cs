@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSettings));
             this.groupExts = new System.Windows.Forms.GroupBox();
             this.extSHA256 = new System.Windows.Forms.TextBox();
             this.labelExtSHA256 = new System.Windows.Forms.Label();
@@ -296,7 +297,9 @@
             this.Controls.Add(this.groupSize);
             this.Controls.Add(this.groupPosition);
             this.Controls.Add(this.groupExts);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormSettings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Параметры";
             this.Load += new System.EventHandler(this.FormSettings_Load);
             this.groupExts.ResumeLayout(false);
