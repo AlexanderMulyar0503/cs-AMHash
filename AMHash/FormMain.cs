@@ -123,11 +123,13 @@ namespace AMHash
 
             if (File.Exists(openFilePath.Text))
             {
+                string hashFilePath = "";
                 // MD5
                 if (calcAlgorithm.SelectedIndex == 0)
                 {
+                    hashFilePath = openFilePath.Text + "." + Properties.Settings.Default.extMD5;
                     FileInfo fileInfo = new FileInfo(openFilePath.Text);
-                    StreamWriter streamWriter = new StreamWriter(openFilePath.Text + "." + Properties.Settings.Default.extMD5);
+                    StreamWriter streamWriter = new StreamWriter(hashFilePath);
                     streamWriter.Write(hashResult.Text + " " + fileInfo.Name);
                     streamWriter.Close();
                 }
@@ -135,13 +137,14 @@ namespace AMHash
                 // SHA256
                 if (calcAlgorithm.SelectedIndex == 1)
                 {
+                    hashFilePath = openFilePath.Text + "." + Properties.Settings.Default.extSHA256;
                     FileInfo fileInfo = new FileInfo(openFilePath.Text);
-                    StreamWriter streamWriter = new StreamWriter(openFilePath.Text + "." + Properties.Settings.Default.extSHA256);
+                    StreamWriter streamWriter = new StreamWriter(hashFilePath);
                     streamWriter.Write(hashResult.Text + " " + fileInfo.Name);
                     streamWriter.Close();
                 }
 
-                MessageBox.Show("Сохранено");
+                MessageBox.Show("Сохранено в " + hashFilePath);
             }
         }
     }
