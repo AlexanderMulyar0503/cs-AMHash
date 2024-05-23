@@ -84,6 +84,10 @@ namespace AMHash
 
                 CheckHash();
             }
+            else
+            {
+                MessageBox.Show("Файл не существует!");
+            }
         }
 
         private void CheckHash()
