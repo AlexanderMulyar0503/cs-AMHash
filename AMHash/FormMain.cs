@@ -32,10 +32,6 @@ namespace AMHash
             FormSettings formSettings = new FormSettings();
             formSettings.extMD5.Text = Properties.Settings.Default.extMD5;
             formSettings.extSHA256.Text = Properties.Settings.Default.extSHA256;
-            formSettings.positionX.Value = this.Location.X;
-            formSettings.positionY.Value = this.Location.Y;
-            formSettings.sizeWidth.Value = this.Size.Width;
-            formSettings.sizeHeight.Value = this.Size.Height;
             formSettings.ShowDialog();
             this.Location = new Point(Properties.Settings.Default.positionX, Properties.Settings.Default.positionY);
             this.Size = new Size(Properties.Settings.Default.sizeWidth, Properties.Settings.Default.sizeHeight);
